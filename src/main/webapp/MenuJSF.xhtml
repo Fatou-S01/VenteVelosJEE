@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+    <title>Gestion de la vente de vélos</title>
+</h:head>
+<h:body >
+    <div style="height: 500px;background-color:#DFE2F2;display: flex;justify-content: space-between">
+        <div>
+            <h1 style="margin-top: 220px;font-weight: 700;font-size: 50px;width: 70%;margin-left: 20px;text-shadow: 1px 1px 1px #f6f6f6">Bienvenue dans la gestion des ventes de vélos</h1>
+            <p style="margin-left: 20px;font-size: 20px;width: 70%;">Gérer mieux vos ventes en connaissant à temps les stocks,les quantités,etc..afin de mieux satisfaire vos clients !!</p>
+        </div>
+        <img alt="user header" src="./velo1.png"/>
+    </div>
+
+    <div style="display: flex;flex-direction: row; justify-content: space-between;margin-top: 50px">
+        <p:card style="width: 25%;margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Produits
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:button icon="pi pi-plus-circle" value="Ajouter" outcome="/Produit/addProduit"/>
+                <p:button icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em" outcome="/Produit/produit"/>
+            </f:facet>
+        </p:card>
+
+
+
+        <p:card style="width: 25%; margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Employés
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-plus-circle" value="Ajouter"/>
+                <p:commandButton icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+
+        <p:card style="width: 25%;margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Articles Commandés
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:button icon="pi pi-plus-circle" value="Ajouter" outcome="/ArticleCommande/addArticleCommande" />
+                <p:button icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em" outcome="/ArticleCommande/ArticleCommandeJSF" />
+            </f:facet>
+        </p:card>
+        <p:card style="width: 25%;margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Catégorie
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-plus-circle" value="Ajouter"/>
+                <p:commandButton icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+    </div>
+
+
+
+
+    <div style="display: flex;flex-direction: row; justify-content: space-between;margin-top: 15px">
+        <p:card style="width: 25%;margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Client
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-plus-circle" value="Ajouter"/>
+                <p:commandButton icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+
+
+
+        <p:card style="width: 25%; margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Commande
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-plus-circle" value="Ajouter"/>
+                <p:commandButton icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+
+        <p:card style="width: 25%;margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Magasins
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-plus-circle" value="Ajouter"/>
+                <p:commandButton icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+        <p:card style="width: 25%;margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Marque
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-plus-circle" value="Ajouter"/>
+                <p:commandButton icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+    </div>
+
+
+
+
+    <div style="display: flex;flex-direction: row; margin-top: 15px">
+        <p:card style="width: 25%;margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Personne
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-plus-circle" value="Ajouter"/>
+                <p:commandButton icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+
+        <p:card style="width: 25%; margin-right: 20px">
+            <f:facet name="header">
+                <img alt="user header" src="./Produits.png" style="height: 200px"/>
+            </f:facet>
+            <f:facet name="title">
+                Stock
+            </f:facet>
+            <f:facet name="subtitle">
+                Card subtitle
+            </f:facet>
+
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-plus-circle" value="Ajouter"/>
+                <p:commandButton icon="pi pi-list" value="Liste" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+    </div>
+</h:body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

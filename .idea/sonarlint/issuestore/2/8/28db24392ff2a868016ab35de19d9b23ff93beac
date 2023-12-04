@@ -1,0 +1,9 @@
+
+m	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üô×È8ûé±1
+m	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞİÁ¯8üé±1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÊÛˆôøÿÿÿÿ8ıé±1
+i
+java:S1128"LRemove this unused import 'sn.ept.git.dic2.vente_velo.Facade.EmployeFacade'.(·›¦‘8é±1
+e
+java:S1128
+"HRemove this unused import 'sn.ept.git.dic2.vente_velo.entities.Employe'.(æÆ×Ì8é±1

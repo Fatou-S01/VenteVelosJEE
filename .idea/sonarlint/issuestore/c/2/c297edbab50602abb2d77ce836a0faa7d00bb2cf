@@ -1,0 +1,18 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Š×‘ûÿÿÿÿ8ÑÈÑ¹Â1
+Y
+java:S1948"7Make "articleCommandeFacade" transient or serializable.(†ñŒÈøÿÿÿÿ8ÎÉÑ¹Â1
+Q
+java:S1948$"/Make "produitFacade" transient or serializable.(ÒÙ¾†ùÿÿÿÿ8¦÷ÈˆÃ1
+R
+java:S1948'"0Make "commandeFacade" transient or serializable.(öĞ˜æüÿÿÿÿ8§÷ÈˆÃ1
+F	java:S106g"+Replace this use of System.out by a logger.(êİ¦h8Á÷ÈˆÃ1
+H	java:S106"+Replace this use of System.out by a logger.(­Êï€8Ğ÷ÈˆÃ1
+_
+java:S1128"CRemove this unused import 'jakarta.faces.application.FacesMessage'.(’ï $8Õ÷ÈˆÃ1
+\
+java:S1128"?Remove this unused import 'jakarta.faces.context.FacesContext'.(€óµŠ8Õ÷ÈˆÃ1
+X
+java:S1128"6Remove this unused import 'org.primefaces.PrimeFaces'.(ŸÄĞıÿÿÿÿ8Ö÷ÈˆÃ1
+^
+java:S1068"<Remove this unused "selectedArticleCommandes" private field.( û™©ÿÿÿÿÿ8×÷ÈˆÃ1

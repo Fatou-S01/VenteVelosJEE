@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+<h:head>
+   <title>list-employes</title>
+</h:head>
+
+<h:body>
+
+   <h:form id="formid">
+
+      <p:panelGrid columns="1">
+
+
+         <p:panel id="produitDetail"
+                  rendered="#{produitBean.selectedProduit != null }">
+            <h:panelGrid columns="3">
+               <p:outputLabel value="numéro" for="number" />
+               <p:inputText id="number" value="#{produitBean.selectedProduit.id}" required="true" disabled="true" requiredMessage="The number is required" />
+               <p:message for="number" />
+
+               <p:outputLabel value="Nom" for="nom" />
+               <p:inputText id="nom" value="#{produitBean.selectedProduit.nom}" required="true" requiredMessage="The name is required" />
+               <p:message for="nom" />
+
+               <p:outputLabel value="Année" for="annee" />
+               <p:inputText id="annee" value="#{produitBean.selectedProduit.annee_Modele}" required="true" requiredMessage="The year is required" />
+               <p:message for="annee" />
+
+               <p:outputLabel value="Prix" for="price" />
+               <p:inputText id="price" value="#{produitBean.selectedProduit.prix_Depart}" required="true" requiredMessage="The price is required" />
+               <p:message for="price" />
+
+               <p:outputLabel value="Catégorie" for="categorie" />
+               <p:selectOneMenu id="categorie" value="#{produitBean.selectedCategorieId}" required="true" disabled="true" requiredMessage="The categorie is required">
+                  <f:selectItems value="#{produitBean.allCategories}" var="categorie" itemLabel="#{categorie.nom} n° (#{categorie.id})" itemValue="#{categorie.id}" />
+               </p:selectOneMenu>
+               <p:message for="categorie" />
+
+               <p:outputLabel value="Marque" for="marque" />
+               <p:selectOneMenu id="marque" value="#{produitBean.selectedMarqueId}" required="true" requiredMessage="The marque is required">
+                  <f:selectItems value="#{produitBean.allMarques}" var="marque" itemLabel="#{marque.nom}" itemValue="#{marque.id}" />
+               </p:selectOneMenu>
+               <p:message for="marque" />
+
+
+            </h:panelGrid>
+
+            <f:facet name="header">Modifier un produit</f:facet>
+            <f:facet name="footer">
+               <p:commandButton ajax="false" value="Submit" action="#{produitBean.edit()}" styleClass="ui-button-success me-2" />
+               <p:commandButton ajax="false" value="Undo" action="#{produitBean.undo()}" styleClass="ui-button-danger" />
+            </f:facet>
+         </p:panel>
+
+
+         <p:dataTable var="produit" value="#{produitBean.produits}" selectionMode="single"
+                      rows="12" paginator="true"
+                      paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                      paginatorPosition="bottom"
+                      scrollable="true" scrollWidth="100%"
+                      selection="#{produitBean.selectedProduit}" rowKey="#{produit.id}">
+
+
+            <f:facet name="header">Liste des Produits</f:facet>
+
+            <p:column headerText="Id" style="width: 100px;" sortBy="#{produit.id}" filterBy="#{produit.id}" filterMatchMode="contains"> <!--numero=id-->
+               <h:outputText value="#{ produit.id}" />
+            </p:column>
+            <p:column headerText="Nom" style="width: 100px;" sortBy="#{produit.nom}" filterBy="#{produit.nom}" filterMatchMode="contains">
+               <h:outputText value="#{produit.nom}" />
+            </p:column>
+            <p:column headerText="Année" style="width: 100px;" sortBy="#{produit.annee_Modele}" filterBy="#{produit.annee_Modele}" filterMatchMode="contains">
+               <h:outputText value="#{produit.annee_Modele}" />
+            </p:column>
+            <p:column headerText="Prix de départ" style="width: 100px;" sortBy="#{produit.prix_Depart}" filterBy="#{produit.prix_Depart}" filterMatchMode="contains">
+               <h:outputText value="#{produit.prix_Depart}" />
+            </p:column>
+            <p:column headerText="Marque" style="width: 100px;" sortBy="#{produit.marque_Id.nom}" filterBy="#{produit.marque_Id.nom}" filterMatchMode="contains">
+               <h:outputText value="#{produit.marque_Id.nom}" />
+            </p:column>
+            <p:column headerText="Categorie" style="width: 100px;" sortBy="#{produit.categorie_Id.nom}" filterBy="#{produit.categorie_Id.nom}" filterMatchMode="contains">
+               <h:outputText value="#{produit.categorie_Id.nom}" />
+            </p:column>
+
+
+
+            <p:column headerText="Actions" style="width: 200px;">
+               <p:commandButton ajax="false" value="Edit" action="#{produitBean.setSelectedProduit(produit)}" update=":formid:produitDetail" styleClass="ui-button-help me-2" process="@this" />
+               <p:commandButton ajax="false" value="Delete" action="#{produitBean.delete(produit)}" styleClass="ui-button-danger" update=":formid" process="@this" />
+            </p:column>
+
+         </p:dataTable>
+
+
+      </p:panelGrid>
+
+   </h:form>
+
+</h:body>
+</html>

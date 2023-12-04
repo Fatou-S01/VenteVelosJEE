@@ -1,0 +1,16 @@
+
+r	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÇÂŸûÿÿÿÿ8ù«Î¯1
+r	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÇÂŸûÿÿÿÿ8ù«Î¯1
+r	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øµÒïıÿÿÿÿ8ù«Î¯1
+r	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á‰ıÿÿÿÿ8ù«Î¯1
+r	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ÒĞïÿÿÿÿÿ8ú«Î¯1
+{	java:S116"ZRename this field "numero_commande" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ƒ°ùÿÿÿÿ8‘¬Î¯1
+q	java:S116"URename this field "produit_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªô–Â8’¬Î¯1
+r	java:S116"VRename this field "prix_depart" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃòÀÉ8’¬Î¯1
+r	java:S116"QRename this field "Remise" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦á­÷ùÿÿÿÿ8’¬Î¯1
+j	java:S1001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßä¿¸8¬Î¯1
+o	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øµÒïıÿÿÿÿ8Ÿ¬Î¯1
+o	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²‘Ø¬ûÿÿÿÿ8¡¬Î¯1
+o	java:S100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á‰ıÿÿÿÿ8¢¬Î¯1
+j	java:S100Q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùØŠ¾8£¬Î¯1
+o	java:S100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ÒĞïÿÿÿÿÿ8¤¬Î¯1

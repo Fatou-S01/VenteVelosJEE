@@ -1,0 +1,6 @@
+
+i	java:S116"MRename this field "Id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×­ÒÒ8¹¸¾é­1
+m	java:S116"QRename this field "Prenom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÿÅß8º¸¾é­1
+o	java:S116"NRename this field "Nom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ç³ûÿÿÿÿ8º¸¾é­1
+u	java:S116"TRename this field "Telephone" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÔóÒşÿÿÿÿ8º¸¾é­1
+l	java:S116"PRename this field "Email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áï»‚8º¸¾é­1

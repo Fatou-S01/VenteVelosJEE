@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠŽ×‘ûÿÿÿÿ
+E	java:S106_"+Replace this use of System.out by a logger.(Æ³ð’úÿÿÿÿ
+E	java:S106y"+Replace this use of System.out by a logger.(²Œ¶äùÿÿÿÿ
+J
+java:S1068"4Remove this unused "selectedProduits" private field.(õÐÜ–

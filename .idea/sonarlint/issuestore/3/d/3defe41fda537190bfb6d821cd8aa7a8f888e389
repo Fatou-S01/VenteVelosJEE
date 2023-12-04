@@ -1,0 +1,7 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºˆáùÿÿÿÿ8Õµí­1
+m	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–œàî8¬ÿºí­1
+n	java:S116"RRename this field "Adresse" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÄÛ‰8ÍÖé­1
+q	java:S116"PRename this field "Ville" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬š¹Éüÿÿÿÿ8ÍÖé­1
+k	java:S116"ORename this field "Etat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÅì¹8ÍÖé­1
+t	java:S116"SRename this field "Code_Zip" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½âÒûÿÿÿÿ8ÍÖé­1

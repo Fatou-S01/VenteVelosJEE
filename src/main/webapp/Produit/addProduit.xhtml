@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+<h:head>
+    <title>ajout-Produit primefaces</title>
+</h:head>
+
+<h:body>
+
+    <h:form>
+        <p:panel>
+            <!--            <p:messages></p:messages>-->
+
+            <h:panelGrid columns="3">
+                <p:outputLabel value="Id" for="number" />
+                <p:inputText id="number" value="#{produitBean.produit.id}" required="true" requiredMessage="The number is required" />
+                <p:message for="number" />
+
+
+                <p:outputLabel value="Catégorie" for="categorie" />
+                <p:selectOneMenu id="categorie" value="#{produitBean.selectedCategorieId}" required="true" requiredMessage="The categorie is required">
+                    <f:selectItems value="#{produitBean.allCategories}" var="categorie" itemLabel="#{categorie.nom} (#{categorie.id})" itemValue="#{categorie.id}" />
+                </p:selectOneMenu>
+                <p:message for="categorie" />
+
+                <p:outputLabel value="Marque" for="marque" />
+                <p:selectOneMenu id="marque" value="#{produitBean.selectedMarqueId}" required="true" requiredMessage="The marque is required">
+                    <f:selectItems value="#{produitBean.allMarques}" var="marque" itemLabel="#{marque.nom}" itemValue="#{marque.id}" />
+                </p:selectOneMenu>
+                <p:message for="marque" />
+
+                <p:outputLabel value="Nom" for="nom" />
+                <p:inputText id="nom" value="#{produitBean.produit.nom}" required="true" requiredMessage="The name is required" />
+                <p:message for="nom" />
+
+                <p:outputLabel value="Prix départ" for="prix_depart" />
+                <p:inputText id="prix_depart" value="#{produitBean.produit.prix_Depart}" required="true" requiredMessage="The price is required" />
+                <p:message for="prix_depart" />
+
+                <p:outputLabel value="Annee" for="annee" />
+                <p:inputText id="annee" value="#{produitBean.produit.annee_Modele}" required="true" requiredMessage="The year is required" />
+                <p:message for="annee" />
+
+            </h:panelGrid>
+
+            <f:facet name="header">Ajouter des article Commandes</f:facet>
+            <f:facet name="footer">
+                <p:commandButton ajax="false" value="submit" action="#{produitBean.save()}" styleClass="ui-button-success me-2" />
+                <p:commandButton ajax="false" value="reset" immediate="true" styleClass="ui-button-danger me-2" />
+                <p:button outcome="/Produit/produit" value="Voir la liste" styleClass="ui-button-secondary"/>
+            </f:facet>
+        </p:panel>
+
+
+    </h:form>
+</h:body>
+
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+<h:head>
+    <title>ajout-articleCommande primefaces</title>
+</h:head>
+
+<h:body>
+
+    <h:form>
+        <p:panel>
+            <!--            <p:messages></p:messages>-->
+
+            <h:panelGrid columns="3">
+                <p:outputLabel value="Ligne" for="number" />
+                <p:inputText id="number" value="#{articleCommandeBean.articleCommande.ligne}" required="true" requiredMessage="The number is required" />
+                <p:message for="number" />
+
+
+                <p:outputLabel value="Commande" for="commande" />
+                <p:selectOneMenu id="commande" value="#{articleCommandeBean.selectedCommandeId}" required="true" requiredMessage="The command is required">
+                    <f:selectItems value="#{articleCommandeBean.allCommandes}" var="commande" itemLabel="#{commande.client_Id.prenom} (#{commande.numero_commande})" itemValue="#{commande.numero_commande}" />
+                </p:selectOneMenu>
+                <p:message for="commande" />
+
+                <p:outputLabel value="Produit" for="produit" />
+                <p:selectOneMenu id="produit" value="#{articleCommandeBean.selectedProduitId}" required="true" requiredMessage="The product is required">
+                    <f:selectItems value="#{articleCommandeBean.allProduits}" var="prod" itemLabel="#{prod.nom}" itemValue="#{prod.id}" />
+                </p:selectOneMenu>
+                <p:message for="produit" />
+
+                <p:outputLabel value="Quantité" for="quantity" />
+                <p:inputText id="quantity" value="#{articleCommandeBean.articleCommande.quantite}" required="true" requiredMessage="The quantity is required" />
+                <p:message for="quantity" />
+
+                <p:outputLabel value="Prix départ" for="prix_depart" />
+                <p:inputText id="prix_depart" value="#{articleCommandeBean.articleCommande.prix_depart}" required="true" requiredMessage="The price is required" />
+                <p:message for="prix_depart" />
+
+                <p:outputLabel value="Remise" for="discount" />
+                <p:inputText id="discount" value="#{articleCommandeBean.articleCommande.remise}" required="true" requiredMessage="The discount is required" />
+                <p:message for="discount" />
+
+            </h:panelGrid>
+
+            <f:facet name="header">Ajouter des article Commandes</f:facet>
+            <f:facet name="footer">
+                <p:commandButton ajax="false" value="submit" action="#{articleCommandeBean.save()}" styleClass="ui-button-success me-2" />
+                <p:commandButton ajax="false" value="reset" immediate="true" styleClass="ui-button-danger me-2" />
+                <p:button outcome="/ArticleCommande/ArticleCommandeJSF" value="Voir la liste" styleClass="ui-button-secondary"/>
+            </f:facet>
+        </p:panel>
+
+
+    </h:form>
+</h:body>
+
+</html>
