@@ -15,7 +15,7 @@
 </h:head>
 
 <h:body>
-
+    <ui:include src="../miniMenu.xhtml"></ui:include>
     <h:form id="formid">
 
         <p:panelGrid columns="1">
@@ -24,21 +24,21 @@
             <p:panel id="articleDetail"
                      rendered="#{articleCommandeBean.selectedArticleCommande != null }">
                 <h:panelGrid columns="3">
-                    <p:outputLabel value="numéro" for="number" />
+                    <p:outputLabel value="Ligne" for="number" />
                     <p:inputText id="number" value="#{articleCommandeBean.selectedArticleCommande.ligne}" required="true" disabled="true" requiredMessage="The number is required" />
                     <p:message for="number" />
 
-                    <p:outputLabel value="Prénom" for="firstname" />
-                    <p:inputText id="firstname" value="#{articleCommandeBean.selectedArticleCommande.remise}" required="true" requiredMessage="The firstname is required" />
-                    <p:message for="firstname" />
+                    <p:outputLabel value="Remise" for="remise" />
+                    <p:inputText id="remise" value="#{articleCommandeBean.selectedArticleCommande.remise}" required="true" requiredMessage="The firstname is required" />
+                    <p:message for="remise" />
 
-                    <p:outputLabel value="Nom" for="lastname" />
-                    <p:inputText id="lastname" value="#{articleCommandeBean.selectedArticleCommande.prix_depart}" required="true" requiredMessage="The lastname is required" />
-                    <p:message for="lastname" />
+                    <p:outputLabel value="Prix depart" for="prix_depart" />
+                    <p:inputText id="prix_depart" value="#{articleCommandeBean.selectedArticleCommande.prix_depart}" required="true" requiredMessage="The lastname is required" />
+                    <p:message for="prix_depart" />
 
-                    <p:outputLabel value="Téléphone" for="phone" />
-                    <p:inputText id="phone" value="#{articleCommandeBean.selectedArticleCommande.quantite}" required="true" requiredMessage="The phone is required" />
-                    <p:message for="phone" />
+                    <p:outputLabel value="Quantite" for="quantite" />
+                    <p:inputText id="quantite" value="#{articleCommandeBean.selectedArticleCommande.quantite}" required="true" requiredMessage="The phone is required" />
+                    <p:message for="quantite" />
 
                     <p:outputLabel value="Commande" for="commande" />
                     <p:selectOneMenu id="commande" value="#{articleCommandeBean.selectedCommandeId}" required="true" disabled="true" requiredMessage="The command is required">

@@ -1,116 +1,24 @@
-<ui:composition
-        xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:p="http://primefaces.org/ui"
-        xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-
-
-    <style>
-        .noBorders tr, .noBorders td {
-            background: none !important;
-            border: none !important;
-        }
-    </style>
-
-    <div class="card">
-        <p:panelGrid columns="12" styleClass="noBorders">
-            <p:outputPanel>
-                <p:commandButton id="personne" value="Personne" type="button" icon="pi pi-user"/>
-                <p:menu overlay="true" trigger="personne" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Personne" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Personnes" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="client" value="Client" type="button" icon="pi pi-users"/>
-                <p:menu overlay="true" trigger="client" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Client" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Clients" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="employe" value="Employe" type="button" icon="pi pi-user-plus"/>
-                <p:menu overlay="true" trigger="employe" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Employe" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Employes" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="categorie" value="Categorie" type="button" icon="pi pi-tags"/>
-                <p:menu overlay="true" trigger="categorie" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Categorie" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Categories" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="marque" value="Marque" type="button" icon="pi pi-flag"/>
-                <p:menu overlay="true" trigger="marque" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Marque" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Marques" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="produit" value="Produit" type="button" icon="pi pi-box"/>
-                <p:menu overlay="true" trigger="produit" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Produit" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Produits" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="magasin" value="Magasin" type="button" icon="pi pi-building"/>
-                <p:menu overlay="true" trigger="magasin" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Magasin" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Magasins" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="commande" value="Commande" type="button" icon="pi pi-shopping-cart"/>
-                <p:menu overlay="true" trigger="commande" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Commande" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Commandes" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="articleCommande" value="Article Commande" type="button" icon="pi pi-wallet"/>
-                <p:menu overlay="true" trigger="articleCommande" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout ArticleCommande" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste ArticleCommandes" outcome="/Test" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-            <p:outputPanel>
-                <p:commandButton id="stock" value="Stock" type="button" icon="pi pi-database"/>
-                <p:menu overlay="true" trigger="stock" my="left top" at="left bottom">
-                    <p:menuitem value="Ajout Stock" url="" ajax="false"
-                                icon="pi pi-plus-circle"/>
-                    <p:menuitem value="Liste Stocks" url="" ajax="false"
-                                icon="pi pi-list"/>
-                </p:menu>
-            </p:outputPanel>
-
-        </p:panelGrid>
-
-
+<ui:component xmlns="http://www.w3.org/1999/xhtml"
+              xmlns:ui="http://java.sun.com/jsf/facelets"
+              xmlns:h="http://java.sun.com/jsf/html"
+              xmlns:p="http://primefaces.org/ui"
+              xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <div class="card m-2">
+        <h:form>
+            <p:menubar styleClass="centered-menu">
+                <p:menuitem value="Acceuil" action="#{redirectionBean.redirectToPage('')}" icon="pi pi-home" style="font-size: 14px;"/>
+                <p:menuitem value="Articles" action="#{redirectionBean.redirectToPage('ArticleCommandeJSF.xhtml')}" icon="pi pi-file" style="font-size: 14px;"/>
+                <p:menuitem value="Categories" action="#{redirectionBean.redirectToPage('categorie-pf.xhtml')}" icon="pi pi-list" style="font-size: 14px;"/>
+                <p:menuitem value="Marques" action="#{redirectionBean.redirectToPage('marque-pf.xhtml')}" icon="pi pi-tag" style="font-size: 14px;"/>
+                <p:menuitem value="Clients" action="#{redirectionBean.redirectToPage('client-pf.xhtml')}" icon="pi pi-users" />
+                <p:menuitem value="Commandes" action="#{redirectionBean.redirectToPage('commande-pf.xhtml')}" icon="pi pi-shopping-cart" style="font-size: 14px;"/>
+                <p:menuitem value="Employes" action="#{redirectionBean.redirectToPage('employe-pf.xhtml')}" icon="pi pi-user" style="font-size: 14px;"/>
+                <p:menuitem value="Produits" action="#{redirectionBean.redirectToPage('produit.xhtml')}" icon="pi pi-cubes" style="font-size: 14px;"/>
+                <p:menuitem value="Magasins" action="#{redirectionBean.redirectToPage('magasin-pf.xhtml')}" icon="pi pi-map-marker" style="font-size: 14px;"/>
+                <p:menuitem value="Stocks" action="#{redirectionBean.redirectToPage('stock-pf.xhtml')}" icon="pi pi-chart-bar" style="font-size: 14px;"/>
+                <p:menuitem value="Localisations" action="#{redirectionBean.redirectToPage('localisation-pf.xhtml')}" icon="pi pi-map" style="font-size: 14px;"/>
+            </p:menubar>
+        </h:form>
     </div>
-
-
-</ui:composition>
-
-
-
+</ui:component>

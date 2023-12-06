@@ -54,7 +54,7 @@ public class CategorieRessource {
     }
 
     //Supprimer une categorie
-    /*@DELETE
+    @DELETE
     @Path("{id_categorie}")
     public Response deleteCategorie(@PathParam("id_categorie") Integer id_categorie){
         Categorie categorie = categorieFacade.find(id_categorie);
@@ -64,5 +64,5 @@ public class CategorieRessource {
         categorieFacade.remove(categorie);
         Reponse reponse = new Reponse("La catégorie" + categorie.getNom()  + " a été supprimée");
         return Response.status(Response.Status.OK).entity(reponse).build();
-    }*/
+    }
 }
