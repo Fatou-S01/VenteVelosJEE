@@ -1,5 +1,9 @@
 package sn.ept.git.dic2.vente_velo.ServiceWeb;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.ejb.EJB;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -25,7 +29,22 @@ public class ClientRessource {
 
     //une méthode pour ajouter des clients
     @POST
-    @Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Operation(
+            summary = "Inscription ou Modification des clients",
+            description = "Cet endpoint est utilisé pour enregistrer les clients dans la base de données après leur inscription ou lorsque des modifications sont apportées à un client",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",
+                            description = "Le client a été enregistré à la base de données"
+                    ),
+                    @ApiResponse(
+                            responseCode = "500",
+                            description = "Une erreur s'est produit lors de l'enregistrement du client"
+                    )
+            }
+    )
     public Client addClient(Client p){
         Client tmp = clientFacade.find(p.getId()); //On cherche le client qui a le même id
         if(tmp != null){
@@ -56,8 +75,36 @@ public class ClientRessource {
     }
 
     //Supprimer un client
-    @DELETE
     @Path("{id_client}")
+    @DELETE
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Operation(
+            summary = "Suppression de client",
+            description = "Cet endpoint est utilisé pour supprimer les clients de la base de données",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",
+                            description = "Le client a été supprimé de la base de données"
+                    ),
+                    @ApiResponse(
+                            responseCode = "500",
+                            description = "Une erreur s'est produit lors de la suppression du client"
+                    ),
+                    @ApiResponse(
+                            responseCode = "404",
+                            description = "Le client correspondant à l'id est introuvable",
+                            content = {
+                                    @Content(
+                                            mediaType = MediaType.APPLICATION_JSON,
+                                            examples =  {
+                                                    @ExampleObject(name="Client introuvable")
+                                            }
+                                    )
+                            }
+                    )
+            }
+    )
+
     public Response deleteClient(@PathParam("id_client") Integer id_client){
         Client client = clientFacade.find(id_client);
         if(client == null){

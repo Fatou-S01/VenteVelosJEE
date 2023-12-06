@@ -91,3 +91,9 @@ X
 (src/main/webapp/Produit/addProduit.xhtml,a\2\a23c9e993b469d1adfdc415ba456ec9a7606daa2
 s
 Csrc/main/java/sn/ept/git/dic2/vente_velo/ServiceWeb/CorsFilter.java,0\c\0c751c5d177ffef46fcb17e09ac577db22306209
+r
+Bsrc/main/java/sn/ept/git/dic2/vente_velo/Bean/RedirectionBean.java,4\1\41b5450993a675bda2628a6911b11d1214b15bf1
+N
+src/main/webapp/miniMenu.xhtml,5\6\564c75d4314c22d772af502a56cca203f94b1e1b
+p
+@src/main/java/sn/ept/git/dic2/vente_velo/Bean/SendEmailBean.java,a\b\abce6638214b4b08938d57e6610a045b4312de0b
